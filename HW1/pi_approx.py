@@ -7,7 +7,7 @@ N = 1000000
 
 # Generate N random points as (x,y) tuples
 # each x and y is in range [-1,1]
-random_points = random_uniform_floats = [(random.uniform(-1.0, 1.0), random.uniform(-1.0, 1.0)) for _ in range(N)]
+random_points = [(random.uniform(-1.0, 1.0), random.uniform(-1.0, 1.0)) for _ in range(N)]
 
 # This extracts just the coordinates that's inside the unit circle
 # which means x^2 + y^2 <= 1
