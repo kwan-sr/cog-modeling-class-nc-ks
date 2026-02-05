@@ -8,3 +8,5 @@
 </p>
 
 Group project for the Cognitive Modeling Class Spring 2026 @ RPI
+
+Richard Feynman once said something along the lines of "We don't understand what we can't model." We have modified the wisdom into our own words, but its impact remains—cognitive modeling is crucial to understanding cognition, because we won't understand cognition until we can model it.
