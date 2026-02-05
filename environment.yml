@@ -1,4 +1,4 @@
-name: stan311
+name: cogmodeling
 channels:
   - conda-forge
   - defaults
@@ -134,4 +134,4 @@ dependencies:
       - torch==2.9.1
       - torchvision==0.24.1
       - xarray==2025.12.0
-prefix: /opt/anaconda3/envs/stan311
+prefix: /opt/anaconda3/envs/cogmod
