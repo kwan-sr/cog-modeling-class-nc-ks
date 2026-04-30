@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage[]{amsthm}
+\usepackage[]{amssymb}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+
+\definecolor{grayish}{rgb}{0.93, 0.93, 0.93}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor = \color{grayish}
+}
+
+\title{Cognitive Modeling: Project Template}
+\date\today
+%This information doesn't actually show up on your document unless you use the maketitle command below
+
+\begin{document}
+\maketitle
+
+\input{macros/commands.tex}
+
+\section*{Aims}
+
+The completion of a cognitive modeling project aims to assess your understanding of the models, methods, and techniques covered in the course.
+Your goal is to perform a Bayesian analysis or train a deep neural network with a cognitive modeling focus in a domain of your choosing. 
+The ``domain'' could be an extension of any of the models we considered during class and can tackle questions related, but not limited to:
+\begin{itemize}
+    \item Extensive simulation study -- analyze simulated data \textit{in silico} and answer questions reagrding parameter recovery, prior sensitivity, or model adequacy.
+    \item Real data analysis -- apply a ``white box'' cognitive model (e.g., a version of the diffusion model, an MPT, or even a regression model) to an existing data set, replicating an existing analysis. Some data sets along with descriptions will be provided, but you are free to do some independent research and propose a data set of your own liking.
+    \item Deep learning application -- train a ``black box'' deep neural network and ask cognitively motivated questions, e.g.: How does the network's behavior / performance change as a function of an exogenous factor? How can we modify the training algorithm to increase the network's robustness? Here, you can extend the robustness explorations we did in class and play around with the properties of the noise or data augmentation. Some further ideas will be provided.
+\end{itemize}
+
+\noindent A well-rounded project comprises two essential components: a \textbf{written report} and the \textbf{accompanying code}. The written report is expected to encompass the specific sections below and effectively address the majority of the provided questions.
+
+\subsection*{Introduction}
+
+What is the problem setting and the research question? Is there some interesting previous work done on the topic?
+
+\subsection*{Methods}
+
+Which model(s) did you formulate? What are the key model \textbf{assumptions} (e.g., exchangeability, linearity, etc.)? What are the key model \textbf{parameters} of interest? What \textbf{priors} did you formulate and why do these makes sense for your application? 
+What is the full (joint) model specification? What is the size of the data?
+\noindent Which software and libraries did you use? Which metrics and methods did you compute for assessing model fit (i.e., generative performance) and predictive performance? 
+Did you perform \textbf{prior sensitivity analysis}?
+
+\subsection*{Results}
+
+\begin{itemize}
+    \item \textbf{Diagnostics}: Did your model(s) converge? How was convergence assessed (e.g., train - validation loss trajectories, visual and numeric diagnostics for MCMC).
+    \item \textbf{Interpretation}: What are the implications of your model? How much uncertainty did you mange to reduce? Did you manage to address the question you started with?
+    \item \textbf{Validation}: How did your model fare in terms of generative and predictive performance?
+    \item \textbf{Sensitivity}: How did any of the above change under different prior assumptions or experimental settings?
+\end{itemize}
+
+
+\subsection*{Discussion}
+
+What did the analysis reveal? What did you learn about the problem? What were the challenges? What are the future outlooks for improving the model-based analysis?
+
+\section*{General Remarks}
+\begin{enumerate}
+    \item The report should feature a title page with your names, RINs, institute, etc. 
+    \item You are strongly encouraged to add figures and tables to strengthen the presentation of your report. You are also strongly encouraged to use LaTeX (e.g., via Overleaf) as an exercise. Incorporating aesthetically pleasing figures would be considered a plus.
+    \item You can add references to online materials or research papers if you want to, but are not required to do so. Still, it is encouraged to reference key related works.
+    \item Testing at least two models would be considered a plus.
+    \item The project is not about achieving stunning results. It is about carrying out a principled and systematic analysis in which you are in control of all computational steps and interpretative decisions.
+\end{enumerate}
+
+\end{document}
